@@ -20,7 +20,7 @@
     
     
       
-        <title>Voc coco - BarMessi</title>
+        <title>Dataset format - BarMessi</title>
       
     
     
@@ -70,6 +70,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -96,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Voc coco
+              Dataset format
             
           </span>
         </div>
@@ -183,13 +188,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
         目标检测
       </a>
     </li>
@@ -397,12 +404,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       <label class="md-nav__link" for="__nav_3">
         目标检测
@@ -423,6 +432,92 @@
       <a href="../" class="md-nav__link">
         目标检测
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Dataset format
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Dataset format
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#voc" class="md-nav__link">
+    VOC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yolo" class="md-nav__link">
+    YOLO
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coco-json" class="md-nav__link">
+    coco 格式：json文件
+  </a>
+  
+    <nav class="md-nav" aria-label="coco 格式：json文件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#imagesetstxt" class="md-nav__link">
+    生成ImageSets里txt文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    参考链接
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -710,15 +805,187 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#voc" class="md-nav__link">
+    VOC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yolo" class="md-nav__link">
+    YOLO
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coco-json" class="md-nav__link">
+    coco 格式：json文件
+  </a>
+  
+    <nav class="md-nav" aria-label="coco 格式：json文件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#imagesetstxt" class="md-nav__link">
+    生成ImageSets里txt文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    参考链接
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>Voc coco</h1>
-                
-                
+                <h1 id="_1">准备相应的数据集</h1>
+<p>voc和coco是目标检测中两种常用的数据集，目标检测框架也多用这两种数据集格式作为dataset
+输入形式。准备好数据集是进行训练的的第一步，所以我们有必要了解一下这两种数据集格式</p>
+<h2 id="voc">VOC</h2>
+<ul>
+<li>Annotation文件夹存放的是xml文件，该文件是对图片的解释，每张图片都对于一个同名的xml文件。 </li>
+<li>ImageSets文件夹存放的是txt文件，这些txt将数据集的图片分成了各种集合。如Main下的train.txt   中记录的是用于训练的图片集合 </li>
+<li>JPEGImages文件夹存放的是数据集的原图片 </li>
+<li>SegmentationClass以及SegmentationObject文件夹存放的都是图片，且都是图像分割结果图</li>
+</ul>
+<h2 id="yolo">YOLO</h2>
+<p>YOLO是目标检测中常用的框架，其标签信息如下:</p>
+<ul>
+<li>
+<p>转换前需要提供的文件</p>
+<ul>
+<li>
+<p>存放图片id的.txt文件,如train.txt  test.txt val.txt</p>
+<p>VOCdevkit/VOC%s/ImageSets/Main/%s.txt
+<img alt="" src="../docimgs/train.png" /></p>
+</li>
+<li>
+<p>每一个图片的xml标签
+    VOCdevkit/VOC%s/Annotations/%s.xml
+    <img alt="" src="../docimgs/xml.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p>转换后需要生成的文件</p>
+<ul>
+<li>
+<p>包含所有图片文件的绝对地址.txt文件</p>
+<p><img alt="" src="../docimgs/absolute_path.png" /></p>
+</li>
+<li>
+<p>每张图对应的.txt标签文件
+    VOCdevkit/VOC%s/labels/%s.txt （注意：训练和测试图片的标签文件 txt 都存放在同一个 labels 文件夹下面）
+    <img alt="" src="../docimgs/info.png" /></p>
+</li>
+</ul>
+<p><code>python
+    label x1 y1 w h</code></p>
+</li>
+</ul>
+<h2 id="coco-json">coco 格式：json文件</h2>
+<p>COCO数据集是一个大型的、丰富的物体检测，分割和字幕数据集。这个数据集以scene understanding为目标，主要从复杂的日常场景中截取，图像中的目标通过精确的segmentation进行位置的标定。图像包括91类目标，328,000影像和2,500,000个label。目前为止有语义分割的最大数据集，提供的类别有80 类，有超过33 万张图片，其中20 万张有标注，整个数据集中个体的数目超过150 万个。</p>
+<pre><code class="language-yaml">
+{
+    &quot;images&quot;:
+        [
+            {&quot;file_name&quot;:&quot;cat.jpg&quot;, &quot;id&quot;:1, &quot;height&quot;:1000, &quot;width&quot;:1000},
+            {&quot;file_name&quot;:&quot;dog.jpg&quot;, &quot;id&quot;:2, &quot;height&quot;:1000, &quot;width&quot;:1000},
+            ...
+        ]
+    &quot;annotations&quot;:
+        [
+            {&quot;image_id&quot;:1, &quot;bbox&quot;:[100.00, 200.00, 10.00, 10.00], &quot;category_id&quot;: 1}
+            {&quot;image_id&quot;:2, &quot;bbox&quot;:[150.00, 250.00, 20.00, 20.00], &quot;category_id&quot;: 2}
+            ...
+        ]
+    &quot;categories&quot;:
+        [
+            {&quot;id&quot;:0, &quot;name&quot;:&quot;bg&quot;}
+            {&quot;id&quot;:1, &quot;name&quot;:&quot;cat&quot;}
+            {&quot;id&quot;:1, &quot;name&quot;:&quot;dog&quot;}
+            ...
+        ]
+}
+
+</code></pre>
+<p>"images"对应图片信息，每一项对应一张图片，包括图片名称 序号以及宽 高 </p>
+<p>"annotations"对应标注信息 ，"image_id"对应图片序号，"bbox"对应标注矩形框，顺序为[x, y, w, h]，分别为该矩形框的起始点x坐标，起始点y坐标，宽、高。"category_id"对应类别序号</p>
+<p>"categories"对应类别信息  每一项对应一个类别，"id"对应类别序号，"name"对应类别名称</p>
+<h3 id="imagesetstxt">生成ImageSets里txt文件</h3>
+<pre><code class="language-python">import xml.etree.ElementTree as ET
+from os import getcwd
+
+sets = [('data', 'train'), ('data', 'val'), ('data', 'test')]
+classes = [&quot;jyz&quot;, &quot;xcxj&quot;, &quot;fzc&quot;, &quot;nc&quot;, &quot;jyz_gz&quot;, &quot;fzc_gz&quot;] #根据自己情况修改
+def convert_annotation(year, image_id, list_file):
+    in_file = open('./Annotations/%s.xml' % (image_id),encoding='utf-8')#注意代码与xml文件路径
+    tree = ET.parse(in_file)
+    root = tree.getroot()
+    for obj in root.iter('object'):
+        difficult = 0
+        if obj.find('difficult') != None:
+            difficult = obj.find('difficult').text
+        cls = obj.find('name').text
+        if cls not in classes or int(difficult) == 1:
+            continue
+        cls_id = classes.index(cls)
+        xmlbox = obj.find('bndbox')
+        b = (int(xmlbox.find('xmin').text), int(xmlbox.find('ymin').text), int(xmlbox.find('xmax').text),
+             int(xmlbox.find('ymax').text))
+        list_file.write(&quot; &quot; + &quot;,&quot;.join([str(a) for a in b]) + ',' + str(cls_id))
+wd = getcwd()
+for year, image_set in sets:
+    image_ids = open('./ImageSets\%s.txt' % (image_set)).read().strip().split()#注意路径
+    list_file = open('%s_%s.txt' % (year, image_set), 'w')
+    for image_id in image_ids:
+        list_file.write('%s\JPEGImages\%s.jpg' % (wd, image_id))
+        convert_annotation(year, image_id, list_file)
+        list_file.write('\n')
+    list_file.close()
+
+</code></pre>
+<h3 id="_2">参考链接</h3>
+<p><a href="https://blog.csdn.net/weixin_44764524/article/details/112345718?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0.control&amp;spm=1001.2101.3001.4242">voc2coco</a></p>
                 
               
               
@@ -734,6 +1001,41 @@
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="上一页: 目标检测" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              目标检测
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../nanodet/" class="md-footer__link md-footer__link--next" aria-label="下一页: Nanodet" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              Nanodet
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
