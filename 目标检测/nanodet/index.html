@@ -490,10 +490,30 @@
     Generalized Focal loss损失函数
   </a>
   
+    <nav class="md-nav" aria-label="Generalized Focal loss损失函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    背景知识
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generalized-focal-lossiou" class="md-nav__link">
+    Generalized Focal loss（利用IoU指导分类训练）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     检测头轻量化
   </a>
   
@@ -514,7 +534,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     模型性能
   </a>
   
@@ -522,7 +542,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     参考链接
   </a>
   
@@ -835,10 +855,30 @@
     Generalized Focal loss损失函数
   </a>
   
+    <nav class="md-nav" aria-label="Generalized Focal loss损失函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    背景知识
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generalized-focal-lossiou" class="md-nav__link">
+    Generalized Focal loss（利用IoU指导分类训练）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     检测头轻量化
   </a>
   
@@ -859,7 +899,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     模型性能
   </a>
   
@@ -867,7 +907,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     参考链接
   </a>
   
@@ -894,8 +934,19 @@
                 <h1 id="nanodet">NanoDet</h1>
 <p>该网络结构是2020年底出来的一种轻量级的目标检测网络，刚出来就刷新了目标检测的相关记录。该网络基于anchor free， 且使用多种深度学习框架进行硬件端部署 包括ncnn mnn等。该网络也开启我模型部署化的研究之路，是研究之旅中重要一篇，值得花时间研究。</p>
 <h2 id="generalized-focal-loss">Generalized Focal loss损失函数</h2>
+<h3 id="_1">背景知识</h3>
+<p>正常来说，目标检测分类和定位的训练是分开的。</p>
+<p>训练分类任务时，设类别有n个，用长度为n的one-hot分类标签向量与n个sigmoid预测分类分数计算交叉熵损失，为解决正负样本不平衡一般用Focal loss代替交叉熵损失。</p>
+<p>训练定位任务时，基于anchor的方法通常用预测的边界框位置（x1,x2,y1,y2）与定位标签计算IOU（GIOU、DIOU、CIOU） loss，基于anchor free的方法通常用预测边界框四边与当前位置的距离（l,r,t,d）与定位标签计算L1（L2、smooth L1、MSE等） loss。</p>
+<h3 id="generalized-focal-lossiou">Generalized Focal loss（利用IoU指导分类训练）</h3>
+<p>预测的边界框与定位标签计算得到的IOU，不仅用于计算IOU loss，还用来作为分类的标签，即one-hot分类标签的1改成IOU，再计算分类损失。
+这样做可以将IOU作为定位质量估计与分类结合，IOU较低时说明定位很差，那么它的分类分数应该是要比较小才合理。但是在优化时，Focal Loss只支持0或者1这样的离散类别label。因此文中将Focal Loss改为连续型，称为QFL。FL与QFL对比如下，发现修改不大。</p>
+<p><img alt="" src="../docimgs/qfl.png" /></p>
+<p>于是本文不直接预测y*，而是预测边界框的分布概率预测。具体的，取区间[0,k]（如k=16，可根据数据集改变），将定位标签l,r,t,b除以stride后一般会落到区间[0,k]的某个区间[i,i+1]，因此网络输出k+1个sigmoid作为定位落在区间节点的概率。当定位标签落在区间[i,i+1]时，预测的边界框分布概率p(i),p(i+1)理论上应该较大。因此增加了损失函数DFL：</p>
+<p><img alt="" src="../docimgs/flow.png" /></p>
+<hr />
 <p>基于任意one-stage 检测器上，调整框本身与框质量估计的表示，同时用泛化版本的GFocal Loss训练该改进的表示</p>
-<h2 id="_1">检测头轻量化</h2>
+<h2 id="_2">检测头轻量化</h2>
 <p>在移动端进行优化首先考虑检测头：使用共享权重的检测头，对FPN出来的多尺度feature map使用同一组卷积预测检测框， 然后每一层使用一个可学习的Scale值作为系数，对预测框进行缩放</p>
 <p>优势就是参数量降为不共享权重状态下的1/5</p>
 <p>归一化方式选择BN，因为BN在推理时能够将归一化的参数直接融合进卷积种，而GN不行</p>
@@ -911,14 +962,15 @@
 整体看起来大致分为backbone PAN 以及最后的后处理输出，和之前的检测网络大同小异
 最终整体框架图:
 <img alt="" src="../docimgs/framework.png" /></p>
-<h2 id="_2">模型性能</h2>
+<h2 id="_3">模型性能</h2>
 <p>在320x320输入分辨率的情况下，整个模型的Flops只有0.72B，yolov4-tiny则有6.96B，小了将近十倍！模型的参数量也只有0.95M
 权重文件在使用ncnn optimize进行16位存储之后，只有1.8mb。</p>
 <p><img alt="" src="../docimgs/performance.png" /></p>
-<h3 id="_3">参考链接</h3>
+<h3 id="_4">参考链接</h3>
 <p><a href="https://zhuanlan.zhihu.com/p/306530300">RangiLyu 知乎</a></p>
 <p><a href="https://zhuanlan.zhihu.com/p/147691786">Generalized Focal loss</a></p>
 <p><a href="https://github.com/RangiLyu/nanodet">Github链接</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/357415257">GFL详解</a></p>
                 
               
               
