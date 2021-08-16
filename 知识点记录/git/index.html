@@ -967,27 +967,31 @@
 <p>git config --global user.name "wudongliang"
 git config --global user.email "wudongliang@sensetime.com"</p>
 <h3 id="create-a-new-repository">Create a new repository</h3>
-<p>git clone git@gitlab.sz.sensetime.com:wudongliang/notes.git
+<pre><code class="language-python">git clone git@gitlab.sz.sensetime.com:wudongliang/notes.git
 cd notes
 touch README.md
 git add README.md
-git commit -m "add README"
-git push -u origin master</p>
+git commit -m &quot;add README&quot;
+git push -u origin master
+</code></pre>
 <h3 id="push-an-existing-folder">Push an existing folder</h3>
-<p>cd existing_folder
+<pre><code class="language-python">cd existing_folder
 git init
 git remote add origin git@gitlab.sz.sensetime.com:wudongliang/notes.git
 git add.
-git commit -m "Initial commit"
-git push -u origin master</p>
+git commit -m &quot;Initial commit&quot;
+git push -u origin master
+</code></pre>
 <h3 id="push-an-existing-git-repository">Push an existing Git repository</h3>
-<p>cd existing_repo
+<pre><code class="language-python">cd existing_repo
 git remote rename origin old-origin
 git remote add origin git@gitlab.sz.sensetime.com:wudongliang/notes.git
 git push -u origin --all
-git push -u origin --tags</p>
+git push -u origin --tags
+</code></pre>
 <h2 id="_2">本地分支和远程分支绑定</h2>
-<p>git checkout -b dev origin/dev</p>
+<pre><code class="language-python">git checkout -b dev origin/dev
+</code></pre>
                 
               
               
