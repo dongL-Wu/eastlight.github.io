@@ -1,83 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>http://barmessi.com/</loc>
-     <lastmod>2021-08-23</lastmod>
+     <lastmod>2021-09-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>http://barmessi.com/%E4%BC%A0%E7%BB%9F%E5%9B%BE%E5%83%8F%E7%AE%97%E6%B3%95/</loc>
-     <lastmod>2021-08-23</lastmod>
+     <lastmod>2021-09-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>http://barmessi.com/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/</loc>
-     <lastmod>2021-08-23</lastmod>
+     <lastmod>2021-09-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>http://barmessi.com/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/voc_coco/</loc>
-     <lastmod>2021-08-23</lastmod>
+     <lastmod>2021-09-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>http://barmessi.com/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/nanodet/</loc>
-     <lastmod>2021-08-23</lastmod>
+     <lastmod>2021-09-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>http://barmessi.com/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/</loc>
-     <lastmod>2021-08-23</lastmod>
+     <lastmod>2021-09-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>http://barmessi.com/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/unet/</loc>
-     <lastmod>2021-08-23</lastmod>
+     <lastmod>2021-09-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>http://barmessi.com/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/PI-Unet/</loc>
-     <lastmod>2021-08-23</lastmod>
+     <lastmod>2021-09-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>http://barmessi.com/%E5%A4%9A%E6%A8%A1%E6%80%81%E8%AF%86%E5%88%AB/</loc>
-     <lastmod>2021-08-23</lastmod>
+     <lastmod>2021-09-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>http://barmessi.com/%E9%83%A8%E7%BD%B2%E8%90%BD%E5%9C%B0/</loc>
-     <lastmod>2021-08-23</lastmod>
+     <lastmod>2021-09-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>http://barmessi.com/%E8%AE%BA%E6%96%87%E9%80%9F%E9%80%92/</loc>
-     <lastmod>2021-08-23</lastmod>
+     <lastmod>2021-09-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>http://barmessi.com/%E8%AE%BA%E6%96%87%E9%80%9F%E9%80%92/Masked%20Face%20Recognition%20Challenge%20The%20InsightFace%20Track%20Report/</loc>
-     <lastmod>2021-08-23</lastmod>
+     <lastmod>2021-09-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://barmessi.com/%E8%AE%BA%E6%96%87%E9%80%9F%E9%80%92/A%20Deep%20Adversarial%20Framework%20for%20Visually%20Explainable%20Periocular%20Recognition/</loc>
+     <lastmod>2021-09-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>http://barmessi.com/C%2B%2B%E5%AD%A6%E4%B9%A0/</loc>
-     <lastmod>2021-08-23</lastmod>
+     <lastmod>2021-09-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>http://barmessi.com/C%2B%2B%E5%AD%A6%E4%B9%A0/chapter1/</loc>
-     <lastmod>2021-08-23</lastmod>
+     <lastmod>2021-09-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>http://barmessi.com/C%2B%2B%E5%AD%A6%E4%B9%A0/chapter3/</loc>
-     <lastmod>2021-08-23</lastmod>
+     <lastmod>2021-09-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>http://barmessi.com/%E7%9F%A5%E8%AF%86%E7%82%B9%E8%AE%B0%E5%BD%95/</loc>
-     <lastmod>2021-08-23</lastmod>
+     <lastmod>2021-09-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>http://barmessi.com/%E7%9F%A5%E8%AF%86%E7%82%B9%E8%AE%B0%E5%BD%95/mkdocs/</loc>
-     <lastmod>2021-08-23</lastmod>
+     <lastmod>2021-09-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>http://barmessi.com/%E7%9F%A5%E8%AF%86%E7%82%B9%E8%AE%B0%E5%BD%95/git/</loc>
-     <lastmod>2021-08-23</lastmod>
+     <lastmod>2021-09-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>http://barmessi.com/%E6%AF%8F%E5%91%A8%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</loc>
-     <lastmod>2021-08-23</lastmod>
+     <lastmod>2021-09-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>http://barmessi.com/%E6%AF%8F%E5%91%A8%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/august/</loc>
-     <lastmod>2021-08-23</lastmod>
+     <lastmod>2021-09-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
